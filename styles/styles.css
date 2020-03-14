@@ -1,3 +1,88 @@
+body {
+  font-family: "Public Sans", Arial, sans-serif;
+  margin: 0;
+  background-color: #fafafa;
+}
+
+.button {
+  font-size: 14px;
+  font-weight: bold;
+  width: 164px;
+  height: 44px;
+  color: white;
+  border: 0;
+  border-radius: 25px;
+  background-color: #2bb7da;
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background-image: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
+}
+
+.logo {
+  width: 139px;
+  height: 20px;
+}
+
+.section {
+  padding: 0 164px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+  background-color: white;
+}
+
+nav {
+  width: 50%;
+  max-width: 330px;
+  margin: 0 20px;
+}
+
+.nav-list {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 0;
+  list-style-type: none;
+  justify-items: center;
+}
+
+.nav-list__item {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+
+.nav-list__item a {
+  text-decoration: none;
+  color: #9698a6;
+}
+
+.article-preview__cover {
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  white-space: nowrap;
+}
+
+.article-preview__cover img {
+  width: 100%;
+  height: auto;
+}
+
 .attribution {
   font-size: 18px;
   text-align: center;
@@ -5,4 +90,28 @@
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (max-width: 1024px) {
+  .section {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section {
+    padding-right: 74px;
+    padding-left: 74px;
+  }
+  nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .section {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
 }

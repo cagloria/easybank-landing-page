@@ -1,8 +1,123 @@
+$color-primary-blue: hsl(233, 26%, 24%);
+$color-primary-green: hsl(136, 65%, 51%);
+$color-primary-cyan: hsl(192, 70%, 51%);
+
+$color-neutral-gray-blue: hsl(233, 8%, 62%);
+$color-neutral-light-gray-blue: hsl(220, 16%, 96%);
+$color-neutral-light-gray: hsl(0, 0%, 98%);
+$color-neutral-white: hsl(0, 0%, 100%);
+$font-size-main: 18px;
+$font-size-small: 14px;
+$font-family: "Public Sans", Arial, sans-serif;
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    background-color: $color-neutral-light-gray;
+}
+
+.button {
+    font-size: $font-size-small;
+    font-weight: bold;
+    width: 164px;
+    height: 44px;
+    color: $color-neutral-white;
+    border: 0;
+    border-radius: 25px;
+    background-color: $color-primary-cyan;
+    background-image: linear-gradient(
+        90deg,
+        $color-primary-green 0%,
+        $color-primary-cyan 100%
+    );
+}
+
+.logo {
+    width: 139px;
+    height: 20px;
+}
+
+.section {
+    padding: 0 164px;
+}
+
+// Header
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: $color-neutral-white;
+}
+
+nav {
+    width: 50%;
+    max-width: 330px;
+    margin: 0 20px;
+}
+
+.nav-list {
+    font-size: $font-size-small;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    list-style-type: none;
+    justify-items: center;
+    &__item {
+        width: fit-content;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: $color-neutral-gray-blue;
+        }
+    }
+}
+
+// Articles
+.article-preview {
+    &__cover {
+        overflow: hidden;
+        width: 300px;
+        height: 200px;
+        white-space: nowrap;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Footer
 .attribution {
     font-size: 18px;
     text-align: center;
-
     a {
         color: hsl(228, 45%, 44%);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .section {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section {
+        padding-right: 74px;
+        padding-left: 74px;
+    }
+
+    nav {
+        display: none;
+        // TODO: Tablet/mobile nav
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .section {
+        padding-right: 24px;
+        padding-left: 24px;
     }
 }

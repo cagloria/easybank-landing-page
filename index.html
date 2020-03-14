@@ -8,6 +8,7 @@
             href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
         <link
             rel="icon"
             type="image/png"
@@ -18,7 +19,7 @@
         <title>Frontend Mentor | Easybank landing page</title>
     </head>
     <body>
-        <header>
+        <header class="section">
             <img class="logo" src="./images/logo.svg" alt="Easybank logo" />
             <nav>
                 <ul class="nav-list">
@@ -138,11 +139,12 @@
                 </div>
 
                 <div class="articles-container">
-                    <img
-                        class="article-preview__cover"
-                        src="./images/image-currency.jpg"
-                        alt="Various currency bills"
-                    />
+                    <div class="article-preview__cover">
+                        <img
+                            src="./images/image-currency.jpg"
+                            alt="Various currency bills"
+                        />
+                    </div>
                     <p class="article-preview__author">
                         By Claire Robinson
                     </p>
@@ -155,11 +157,12 @@
                         money in a single …
                     </p>
 
-                    <img
-                        class="article-preview__cover"
-                        src="./images/image-restaurant.jpg"
-                        alt="Dishes and plates in a restaurant"
-                    />
+                    <div class="article-preview__cover">
+                        <img
+                            src="./images/image-restaurant.jpg"
+                            alt="Dishes and plates in a restaurant"
+                        />
+                    </div>
                     <p class="article-preview__author">
                         By Wilson Hutton
                     </p>
@@ -172,11 +175,12 @@
                         means you …
                     </p>
 
-                    <img
-                        class="article-preview__cover"
-                        src="./images/image-plane.jpg"
-                        alt="Wing of an airplane"
-                    />
+                    <div class="article-preview__cover">
+                        <img
+                            src="./images/image-plane.jpg"
+                            alt="Wing of an airplane"
+                        />
+                    </div>
                     <p class="article-preview__author">
                         By Wilson Hutton
                     </p>
@@ -189,11 +193,12 @@
                         even show you …
                     </p>
 
-                    <img
-                        class="article-preview__cover"
-                        src="./images/image-confetti.jpg"
-                        alt="Confetti against a blue background"
-                    />
+                    <div class="article-preview__cover">
+                        <img
+                            src="./images/image-confetti.jpg"
+                            alt="Confetti against a blue background"
+                        />
+                    </div>
                     <p class="article-preview__author">
                         By Claire Robinson
                     </p>
@@ -209,7 +214,7 @@
             </section>
         </main>
 
-        <footer>
+        <footer class="section">
             <img class="logo" src="./images/logo.svg" alt="Easybank logo" />
             <ul class="footer-nav">
                 <li class="footer-nav__item"><a href="#">About Us</a></li>
