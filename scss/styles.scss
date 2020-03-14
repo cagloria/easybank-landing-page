@@ -39,6 +39,15 @@ body {
 
 .section {
     padding: 0 164px;
+    &--main {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+}
+
+.main-text {
+    font-size: $font-size-main;
+    color: $color-neutral-gray-blue;
 }
 
 // Header
@@ -70,6 +79,23 @@ nav {
             text-decoration: none;
             color: $color-neutral-gray-blue;
         }
+    }
+}
+
+// Intro
+.document-intro {
+    max-width: 450px;
+    margin: 180px 0 170px;
+    &__title {
+        font-size: 45px;
+        font-weight: 400;
+        margin: 0 0 34px;
+
+        color: $color-primary-blue;
+    }
+
+    &__body {
+        margin: 0 0 40px;
     }
 }
 
@@ -105,13 +131,27 @@ nav {
 
 @media only screen and (max-width: 768px) {
     .section {
-        padding-right: 74px;
-        padding-left: 74px;
+        padding-right: 64px;
+        padding-left: 64px;
+    }
+
+    header {
+        .button {
+            display: none;
+        }
     }
 
     nav {
         display: none;
         // TODO: Tablet/mobile nav
+    }
+
+    // Intro
+    .document-intro {
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
     }
 }
 
@@ -119,5 +159,20 @@ nav {
     .section {
         padding-right: 24px;
         padding-left: 24px;
+    }
+
+    .main-text {
+        font-size: 14px;
+    }
+
+    .document-intro {
+        &__title {
+            font-size: 36px;
+            margin-bottom: 26px;
+        }
+
+        &__body {
+            margin-bottom: 36px;
+        }
     }
 }
