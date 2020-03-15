@@ -38,18 +38,23 @@ body {
 
 .section {
     padding: 0 164px;
+    max-width: 1110px;
+    margin: 0 auto;
 
-    &__wrapper {
+    &--wrapped {
         // Used for normal section with a necessary background color
         // Place wrapper around section content
-        max-width: 1110px;
-        margin: 0 auto;
+        max-width: initial;
+        margin: 0;
+        .section__wrapper {
+            max-width: 1110px;
+            margin: 0 auto;
+        }
     }
 
-    &--main {
-        // Normal section with unnecessary background color
-        max-width: 1110px;
-        margin: 0 auto;
+    &--full-width {
+        // Header/footer
+        max-width: initial;
     }
 }
 
