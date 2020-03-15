@@ -1,7 +1,6 @@
 $color-primary-blue: hsl(233, 26%, 24%);
 $color-primary-green: hsl(136, 65%, 51%);
 $color-primary-cyan: hsl(192, 70%, 51%);
-
 $color-neutral-gray-blue: hsl(233, 8%, 62%);
 $color-neutral-light-gray-blue: hsl(220, 16%, 96%);
 $color-neutral-light-gray: hsl(0, 0%, 98%);
@@ -39,7 +38,16 @@ body {
 
 .section {
     padding: 0 164px;
+
+    &__wrapper {
+        // Used for normal section with a necessary background color
+        // Place wrapper around section content
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+
     &--main {
+        // Normal section with unnecessary background color
         max-width: 1110px;
         margin: 0 auto;
     }
@@ -47,6 +55,7 @@ body {
 
 .main-text {
     font-size: $font-size-main;
+    line-height: 30px;
     color: $color-neutral-gray-blue;
 }
 
@@ -83,14 +92,17 @@ nav {
 }
 
 // Intro
+.intro {
+    padding-top: 180px;
+    padding-bottom: 170px;
+}
+
 .document-intro {
     max-width: 450px;
-    margin: 180px 0 170px;
     &__title {
         font-size: 45px;
         font-weight: 400;
         margin: 0 0 34px;
-
         color: $color-primary-blue;
     }
 
@@ -99,17 +111,110 @@ nav {
     }
 }
 
+// Features
+.features {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    background-color: $color-neutral-light-gray-blue;
+    .section-intro {
+        margin-bottom: 70px;
+    }
+}
+
+.section-intro {
+    max-width: 660px;
+    &__title {
+        font-size: 36px;
+        font-weight: 400;
+        margin: 0 0 34px;
+        color: $color-primary-blue;
+    }
+
+    &__body {
+        margin: 0;
+    }
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 230px));
+    column-gap: 30px;
+    row-gap: 35px;
+}
+
+.feature {
+    max-width: 250px;
+
+    &__icon {
+        width: 72px;
+        height: 72px;
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 400;
+        margin: 45px 0 35px;
+        color: $color-primary-blue;
+    }
+
+    &__body {
+        font-size: $font-size-small;
+        line-height: 25px;
+        margin: 0;
+        color: $color-neutral-gray-blue;
+    }
+}
+
 // Articles
+.articles {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    .section-intro {
+        margin-bottom: 50px;
+    }
+}
+
+.articles-container {
+    display: grid;
+    justify-content: stretch;
+    grid-template-columns: repeat(auto-fill, 255px);
+    gap: 30px;
+}
+
 .article-preview {
+    background-color: $color-neutral-white;
     &__cover {
         overflow: hidden;
-        width: 300px;
+        width: 100%;
         height: 200px;
         white-space: nowrap;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         img {
-            width: 100%;
-            height: auto;
+            width: auto;
+            height: 100%;
         }
+    }
+
+    &__author {
+        font-size: 12px;
+        margin: 30px 25px 15px;
+        color: $color-neutral-gray-blue;
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0 25px 12px;
+        color: $color-primary-blue;
+    }
+
+    &__body {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 25px;
+        padding-bottom: 25px;
+        color: $color-neutral-gray-blue;
     }
 }
 
@@ -153,18 +258,64 @@ nav {
         margin-left: auto;
         text-align: center;
     }
+
+    .features-container {
+        justify-content: center;
+    }
+
+    // Features
+    .features {
+        text-align: center;
+
+        .section-intro {
+            margin-bottom: 60px;
+        }
+    }
+
+    .feature {
+        &__title {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    // Articles
+    .articles {
+        .section-intro {
+            text-align: center;
+        }
+    }
+
+    .articles-container {
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 425px) {
     .section {
-        padding-right: 24px;
-        padding-left: 24px;
+        padding-right: 35px;
+        padding-left: 35px;
+        &--full-width {
+            padding-right: 24px;
+            padding-left: 24px;
+        }
     }
 
     .main-text {
         font-size: 14px;
+        line-height: 25px;
     }
 
+    .section-intro {
+        margin-bottom: 55px;
+        text-align: center;
+        &__title {
+            font-size: 30px;
+            margin-bottom: 24px;
+        }
+    }
+
+    // Intro
     .document-intro {
         &__title {
             font-size: 36px;
@@ -173,6 +324,18 @@ nav {
 
         &__body {
             margin-bottom: 36px;
+        }
+    }
+
+    // Features
+    .features-container {
+        justify-content: center;
+    }
+
+    .feature {
+        &__title {
+            font-size: 18px;
+            margin: 30px 0;
         }
     }
 }
