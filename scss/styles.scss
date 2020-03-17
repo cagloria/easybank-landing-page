@@ -142,14 +142,12 @@ nav {
 
 .features-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(auto, 230px));
+    grid-template-columns: repeat(4, minmax(auto, 250px));
     column-gap: 30px;
     row-gap: 35px;
 }
 
 .feature {
-    max-width: 250px;
-
     &__icon {
         width: 72px;
         height: 72px;
@@ -306,10 +304,24 @@ footer {
     color: $color-neutral-gray-blue;
 }
 
+@media only screen and (max-width: 1180px) {
+    .features-container {
+        grid-template-columns: repeat(2, minmax(auto, 250px));
+        grid-auto-rows: auto;
+        justify-content: space-between;
+        text-align: center;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .section {
         padding-right: 100px;
         padding-left: 100px;
+    }
+
+    .feature {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     // Footer
@@ -360,11 +372,12 @@ footer {
         text-align: center;
     }
 
+    // Features
     .features-container {
         justify-content: center;
+        grid-template-columns: minmax(auto, 250px);
     }
 
-    // Features
     .features {
         text-align: center;
 
@@ -465,10 +478,6 @@ footer {
     }
 
     // Features
-    .features-container {
-        justify-content: center;
-    }
-
     .feature {
         &__title {
             font-size: 18px;

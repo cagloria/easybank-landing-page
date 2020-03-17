@@ -142,15 +142,11 @@ nav {
 .features-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(auto, 230px))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(auto, 230px));
+  -ms-grid-columns: (minmax(auto, 250px))[4];
+      grid-template-columns: repeat(4, minmax(auto, 250px));
   -webkit-column-gap: 30px;
           column-gap: 30px;
   row-gap: 35px;
-}
-
-.feature {
-  max-width: 250px;
 }
 
 .feature__icon {
@@ -345,10 +341,26 @@ footer a {
   color: #9698a6;
 }
 
+@media only screen and (max-width: 1180px) {
+  .features-container {
+    -ms-grid-columns: (minmax(auto, 250px))[2];
+        grid-template-columns: repeat(2, minmax(auto, 250px));
+    grid-auto-rows: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .section {
     padding-right: 100px;
     padding-left: 100px;
+  }
+  .feature {
+    margin-left: auto;
+    margin-right: auto;
   }
   footer .button {
     -ms-grid-column: 2;
@@ -397,6 +409,8 @@ footer a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-grid-columns: minmax(auto, 250px);
+        grid-template-columns: minmax(auto, 250px);
   }
   .features {
     text-align: center;
@@ -480,11 +494,6 @@ footer a {
   }
   .document-intro__body {
     margin-bottom: 36px;
-  }
-  .features-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .feature__title {
     font-size: 18px;
