@@ -124,6 +124,12 @@ nav {
         height: 1034px;
     }
 
+    &--mobile {
+        z-index: -1;
+
+        display: none;
+    }
+
     &--devices {
         z-index: 1;
         top: -44px;
@@ -411,12 +417,51 @@ footer {
     }
 
     // Intro
+    .intro-section {
+        padding-top: 0;
+    }
+
     .document-intro {
         width: initial;
         max-width: 400px;
         margin-right: auto;
         margin-left: auto;
         text-align: center;
+    }
+
+    .bg-image-container {
+        position: relative;
+        width: auto;
+        height: initial;
+        margin-right: -64px;
+        margin-left: -64px;
+        // 64px = left/right padding of parent container
+    }
+
+    .bg-image {
+        position: relative;
+        &--desktop {
+            display: none;
+        }
+
+        &--mobile {
+            right: 0;
+
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        &--devices {
+            position: absolute;
+            top: -142px;
+            right: 0;
+            left: 0;
+            width: 94%;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 
     // Features
@@ -522,6 +567,12 @@ footer {
         &__body {
             margin-bottom: 36px;
         }
+    }
+
+    .bg-image-container {
+        margin-right: -35px;
+        margin-left: -35px;
+        // 35px = left/right padding of parent container
     }
 
     // Features
