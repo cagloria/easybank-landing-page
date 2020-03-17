@@ -180,11 +180,8 @@ nav {
 .articles-container {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
-  -ms-grid-columns: (255px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 255px);
+  -ms-grid-columns: (minmax(auto, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(auto, 1fr));
   gap: 30px;
 }
 
@@ -196,14 +193,15 @@ nav {
   overflow: hidden;
   width: 100%;
   height: 200px;
-  white-space: nowrap;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 .article-preview__cover img {
-  width: auto;
+  width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .article-preview__author {
@@ -343,13 +341,19 @@ footer a {
 
 @media only screen and (max-width: 1180px) {
   .features-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
     -ms-grid-columns: (minmax(auto, 250px))[2];
         grid-template-columns: repeat(2, minmax(auto, 250px));
     grid-auto-rows: auto;
+  }
+  .articles-container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    text-align: center;
+    -ms-grid-columns: (minmax(auto, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
   }
 }
 
@@ -359,8 +363,8 @@ footer a {
     padding-left: 100px;
   }
   .feature {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
   footer .button {
     -ms-grid-column: 2;
@@ -406,9 +410,6 @@ footer a {
     text-align: center;
   }
   .features-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -ms-grid-columns: minmax(auto, 250px);
         grid-template-columns: minmax(auto, 250px);
   }
@@ -426,9 +427,9 @@ footer a {
     text-align: center;
   }
   .articles-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 25px;
   }
   footer .button {
     margin-left: 0;
