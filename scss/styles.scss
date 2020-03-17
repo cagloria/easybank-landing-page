@@ -31,7 +31,6 @@ body {
     );
     &:hover {
         cursor: pointer;
-
         filter: brightness(125%) saturate(50%);
     }
 }
@@ -73,7 +72,7 @@ body {
 // Header
 header {
     position: sticky;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     display: flex;
     align-items: center;
@@ -102,11 +101,43 @@ nav {
             color: $color-neutral-gray-blue;
             &:hover {
                 padding-bottom: 29px;
-
                 color: $color-primary-blue;
                 border-bottom: 3px solid $color-primary-green;
             }
         }
+    }
+}
+
+.nav-button {
+    display: none;
+    width: 24px;
+    height: 19px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    &--open-nav {
+        background-image: url("../images/icon-close.svg");
+    }
+}
+
+.nav-cover {
+    position: fixed;
+    z-index: 2;
+
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 46%, 0.5);
+    background-image: linear-gradient(
+        0deg,
+        hsla(240, 23%, 79%, 0) 0%,
+        hsla(231, 61%, 25%, 0.562) 100%
+    );
+    &--open-nav {
+        display: block;
     }
 }
 
@@ -258,8 +289,8 @@ nav {
         margin: 0 25px 12px;
         a {
             text-decoration: none;
-
             color: $color-primary-blue;
+
             &:hover {
                 color: $color-primary-green;
             }
@@ -336,9 +367,9 @@ footer {
     grid-column: 1;
     &__item {
         position: relative;
-
         width: 20px;
         height: 20px;
+
         a {
             position: absolute;
             top: 0;
@@ -448,6 +479,10 @@ footer {
         // TODO: Tablet/mobile nav
     }
 
+    .nav-button {
+        display: block;
+    }
+
     // Intro
     .intro-section {
         padding-top: 0;
@@ -464,7 +499,7 @@ footer {
     .bg-image-container {
         position: relative;
         width: auto;
-        height: initial;
+        height: fit-content;
         margin-right: -64px;
         margin-left: -64px;
         // 64px = left/right padding of parent container
@@ -485,7 +520,7 @@ footer {
 
         &--devices {
             position: absolute;
-            top: -142px;
+            top: -126px;
             right: 0;
             left: 0;
             width: 94%;

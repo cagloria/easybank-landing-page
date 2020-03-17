@@ -4,6 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="./scripts/main.js"></script>
+
         <link
             href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap"
             rel="stylesheet"
@@ -20,6 +23,8 @@
     </head>
 
     <body>
+        <div class="nav-cover" onclick="toggleNav()"></div>
+
         <header class="section section--full-width">
             <img class="logo" src="./images/logo.svg" alt="Easybank logo" />
             <nav>
@@ -33,6 +38,8 @@
             </nav>
 
             <button class="button">Request Invite</button>
+
+            <button class="nav-button" onclick="toggleNav()"></button>
         </header>
 
         <main>

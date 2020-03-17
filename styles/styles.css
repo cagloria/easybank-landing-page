@@ -58,7 +58,7 @@ body {
 header {
   position: -webkit-sticky;
   position: sticky;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,6 +107,37 @@ nav {
   padding-bottom: 29px;
   color: #2d314d;
   border-bottom: 3px solid #31d35c;
+}
+
+.nav-button {
+  display: none;
+  width: 24px;
+  height: 19px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.nav-button--open-nav {
+  background-image: url("../images/icon-close.svg");
+}
+
+.nav-cover {
+  position: fixed;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(117, 117, 117, 0.5);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(189, 189, 214, 0)), to(rgba(25, 37, 103, 0.562)));
+  background-image: linear-gradient(0deg, rgba(189, 189, 214, 0) 0%, rgba(25, 37, 103, 0.562) 100%);
+}
+
+.nav-cover--open-nav {
+  display: block;
 }
 
 .intro-section {
@@ -483,6 +514,9 @@ footer a:hover {
   nav {
     display: none;
   }
+  .nav-button {
+    display: block;
+  }
   .intro-section {
     padding-top: 0;
   }
@@ -496,7 +530,9 @@ footer a:hover {
   .bg-image-container {
     position: relative;
     width: auto;
-    height: initial;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin-right: -64px;
     margin-left: -64px;
   }
@@ -514,7 +550,7 @@ footer a:hover {
   }
   .bg-image--devices {
     position: absolute;
-    top: -142px;
+    top: -126px;
     right: 0;
     left: 0;
     width: 94%;
