@@ -29,6 +29,11 @@ body {
         $color-primary-green 0%,
         $color-primary-cyan 100%
     );
+    &:hover {
+        cursor: pointer;
+
+        filter: brightness(125%) saturate(50%);
+    }
 }
 
 .logo {
@@ -95,6 +100,12 @@ nav {
         a {
             text-decoration: none;
             color: $color-neutral-gray-blue;
+            &:hover {
+                padding-bottom: 29px;
+
+                color: $color-primary-blue;
+                border-bottom: 3px solid $color-primary-green;
+            }
         }
     }
 }
@@ -126,7 +137,6 @@ nav {
 
     &--mobile {
         z-index: -1;
-
         display: none;
     }
 
@@ -246,7 +256,14 @@ nav {
         font-size: 16px;
         line-height: 22px;
         margin: 0 25px 12px;
-        color: $color-primary-blue;
+        a {
+            text-decoration: none;
+
+            color: $color-primary-blue;
+            &:hover {
+                color: $color-primary-green;
+            }
+        }
     }
 
     &__body {
@@ -289,6 +306,9 @@ footer {
     a {
         text-decoration: none;
         color: $color-neutral-white;
+        &:hover {
+            color: $color-primary-green;
+        }
     }
 }
 
@@ -315,11 +335,23 @@ footer {
     grid-row: 2;
     grid-column: 1;
     &__item {
+        position: relative;
+
         width: 20px;
         height: 20px;
-        img {
-            width: 100%;
-            height: 100%;
+        a {
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            &:hover {
+                filter: brightness(50%) sepia(100%) saturate(330%)
+                    hue-rotate(83.5deg);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
@@ -446,7 +478,6 @@ footer {
 
         &--mobile {
             right: 0;
-
             display: block;
             width: 100%;
             height: auto;
