@@ -50,6 +50,10 @@ body {
 }
 
 header {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,7 +70,6 @@ header {
 nav {
   width: 50%;
   max-width: 330px;
-  margin: 0 20px;
 }
 
 .nav-list {
@@ -99,7 +102,37 @@ nav {
   padding-bottom: 170px;
 }
 
+.bg-image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  width: 75%;
+  height: 1000px;
+}
+
+.bg-image {
+  position: absolute;
+}
+
+.bg-image--desktop {
+  z-index: -1;
+  top: -175px;
+  left: 23%;
+  width: 1271px;
+  height: 1034px;
+}
+
+.bg-image--devices {
+  z-index: 1;
+  top: -44px;
+  left: 36%;
+  width: 767px;
+  height: 939px;
+}
+
 .document-intro {
+  width: 45%;
   max-width: 450px;
 }
 
@@ -114,13 +147,13 @@ nav {
   margin: 0 0 40px;
 }
 
-.features {
+.features-section {
   padding-top: 110px;
   padding-bottom: 110px;
   background-color: #f3f4f6;
 }
 
-.features .section-intro {
+.features-section .section-intro {
   margin-bottom: 70px;
 }
 
@@ -364,6 +397,9 @@ footer a {
     padding-right: 100px;
     padding-left: 100px;
   }
+  header .button {
+    display: none;
+  }
   .feature {
     margin-right: auto;
     margin-left: auto;
@@ -399,13 +435,14 @@ footer a {
     padding-right: 64px;
     padding-left: 64px;
   }
-  header .button {
-    display: none;
+  header {
+    height: 64px;
   }
   nav {
     display: none;
   }
   .document-intro {
+    width: initial;
     max-width: 400px;
     margin-right: auto;
     margin-left: auto;
