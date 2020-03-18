@@ -554,6 +554,7 @@ footer a:hover {
   }
   .intro-section {
     padding-top: 0;
+    padding-bottom: 130px;
   }
   .document-intro {
     width: initial;
@@ -585,7 +586,7 @@ footer a:hover {
   }
   .bg-image--devices {
     position: absolute;
-    top: -126px;
+    top: -125px;
     right: 0;
     left: 0;
     width: 94%;
@@ -594,6 +595,8 @@ footer a:hover {
     margin-left: auto;
   }
   .features-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
     text-align: center;
   }
   .features-section .section-intro {
@@ -614,6 +617,9 @@ footer a:hover {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     gap: 25px;
+  }
+  .article-preview__body {
+    padding-bottom: 33px;
   }
   footer .button {
     margin-left: 0;
@@ -673,6 +679,9 @@ footer a:hover {
     font-size: 30px;
     margin-bottom: 24px;
   }
+  .intro-section {
+    padding-bottom: 90px;
+  }
   .document-intro__title {
     font-size: 36px;
     margin-bottom: 26px;
@@ -684,11 +693,27 @@ footer a:hover {
     margin-right: -35px;
     margin-left: -35px;
   }
+  .features-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   .feature__title {
     font-size: 18px;
     margin: 30px 0;
   }
+  .articles-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .articles-section .section-intro {
+    margin-bottom: 40px;
+  }
+  .article-preview__body {
+    padding-bottom: 40px;
+  }
   footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
     justify-items: center;
   }
   footer .button {
