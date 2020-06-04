@@ -1,0 +1,36 @@
+$color-primary-blue: hsl(233, 26%, 24%);
+$color-primary-green: hsl(136, 65%, 51%);
+$color-primary-cyan: hsl(192, 70%, 51%);
+$color-neutral-gray-blue: hsl(233, 8%, 62%);
+$color-neutral-light-gray-blue: hsl(220, 16%, 96%);
+$color-neutral-light-gray: hsl(0, 0%, 98%);
+$color-neutral-white: hsl(0, 0%, 100%);
+$font-size-main: 18px;
+$font-size-small: 14px;
+$font-family: "Public Sans", Arial, sans-serif;
+
+.section {
+    padding-right: 36px;
+    padding-left: 36px;
+    // &--wrapped {
+    //     // Used for normal-sized section with a full-width background color
+    //     // Place wrapper around section content
+    //     max-width: initial;
+    //     margin: 0;
+    //     .section__wrapper {
+    //         max-width: 1110px;
+    //         margin: 0 auto;
+    //     }
+    // }
+
+    // &--full-width {
+    //     // Header/footer
+    //     max-width: initial;
+    // }
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
