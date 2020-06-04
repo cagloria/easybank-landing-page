@@ -5,13 +5,10 @@ $color-neutral-gray-blue: hsl(233, 8%, 62%);
 $color-neutral-light-gray-blue: hsl(220, 16%, 96%);
 $color-neutral-light-gray: hsl(0, 0%, 98%);
 $color-neutral-white: hsl(0, 0%, 100%);
-$font-size-main: 18px;
-$font-size-small: 14px;
 $font-family: "Public Sans", Arial, sans-serif;
 
 .section {
-    padding-right: 36px;
-    padding-left: 36px;
+    padding: 0 25px;
     // &--wrapped {
     //     // Used for normal-sized section with a full-width background color
     //     // Place wrapper around section content
@@ -30,6 +27,27 @@ $font-family: "Public Sans", Arial, sans-serif;
 }
 
 .intro-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 70px;
+}
+
+.features-section {
+    padding-top: 38px;
+    padding-bottom: 46px;
+    background-color: $color-neutral-light-gray-blue;
+}
+
+.features-container {
+    display: grid;
+    margin-top: 55px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 4);
+    gap: 11px;
+}
+
+.feature {
     display: flex;
     align-items: center;
     flex-direction: column;

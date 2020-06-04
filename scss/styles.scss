@@ -7,8 +7,6 @@ $color-neutral-gray-blue: hsl(233, 8%, 62%);
 $color-neutral-light-gray-blue: hsl(220, 16%, 96%);
 $color-neutral-light-gray: hsl(0, 0%, 98%);
 $color-neutral-white: hsl(0, 0%, 100%);
-$font-size-main: 18px;
-$font-size-small: 14px;
 $font-family: "Public Sans", Arial, sans-serif;
 
 body {
@@ -18,7 +16,7 @@ body {
 }
 
 .button {
-    font-size: $font-size-small;
+    font-size: 14px;
     font-weight: bold;
     width: 164px;
     height: 44px;
