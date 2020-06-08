@@ -1,5 +1,6 @@
 .section {
-  padding: 0 25px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .intro-section {
@@ -111,6 +112,76 @@
   text-align: left;
 }
 
+footer {
+  display: -ms-grid;
+  display: grid;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: #2d314d;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  justify-items: center;
+  gap: 32px;
+}
+
+footer .button {
+  margin: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  color: #31d35c;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 186px;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.social-links__link {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+}
+
+.social-links__link * {
+  width: 100%;
+  height: 100%;
+}
+
+.social-links__link a {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer-nav {
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 16px;
+}
+
 h1, h2, h3 {
   font-weight: 400;
   text-align: center;
@@ -140,6 +211,14 @@ p {
   margin-bottom: 20px;
   text-align: center;
   color: #9698a6;
+}
+
+.copyright {
+  margin-top: -5px;
+}
+
+.attribution {
+  margin-top: -30px;
 }
 
 body {

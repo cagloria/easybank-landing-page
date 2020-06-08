@@ -8,7 +8,8 @@ $color-neutral-white: hsl(0, 0%, 100%);
 $font-family: "Public Sans", Arial, sans-serif;
 
 .section {
-    padding: 0 25px;
+    padding-right: 25px;
+    padding-left: 25px;
     // &--wrapped {
     //     // Used for normal-sized section with a full-width background color
     //     // Place wrapper around section content
@@ -108,4 +109,60 @@ $font-family: "Public Sans", Arial, sans-serif;
         margin: 0 32px 15px;
         text-align: left;
     }
+}
+
+footer {
+    display: grid;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: $color-primary-blue;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    justify-items: center;
+    gap: 32px;
+    .button {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: $color-neutral-white;
+        &:hover {
+            color: $color-primary-green;
+        }
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    width: 186px;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    &__link {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        text-decoration: none;
+        * {
+            width: 100%;
+            height: 100%;
+        }
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.footer-nav {
+    display: grid;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 16px;
 }
