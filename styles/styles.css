@@ -1,3 +1,44 @@
+body {
+  font-family: "Public Sans", Arial, sans-serif;
+  margin: 0;
+  background-color: #fafafa;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 64px;
+  padding: 22px 24px;
+  background-color: white;
+}
+
+.nav-button {
+  width: 24px;
+  height: 19px;
+  padding: 0;
+  -webkit-transition: background-image 0.2s;
+  transition: background-image 0.2s;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.nav-button--open-nav {
+  background-image: url("../images/icon-close.svg");
+}
+
 .section {
   padding-right: 25px;
   padding-left: 25px;
@@ -221,10 +262,8 @@ p {
   margin-top: -30px;
 }
 
-body {
-  font-family: "Public Sans", Arial, sans-serif;
-  margin: 0;
-  background-color: #fafafa;
+button:hover {
+  cursor: pointer;
 }
 
 .button {
@@ -234,6 +273,10 @@ body {
   height: 44px;
   margin-top: 16px;
   margin-bottom: 16px;
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
   color: white;
   border: 0;
   border-radius: 25px;
@@ -243,7 +286,6 @@ body {
 }
 
 .button:hover {
-  cursor: pointer;
   -webkit-filter: brightness(125%) saturate(50%);
           filter: brightness(125%) saturate(50%);
 }
