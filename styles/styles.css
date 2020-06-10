@@ -330,8 +330,16 @@ a:hover {
   background-position: 50% 50%;
 }
 
+.nav-button:hover {
+  background-image: url("../images/icon-hamburger-green.svg");
+}
+
 .nav-button--open-nav {
   background-image: url("../images/icon-close.svg");
+}
+
+.nav-button--open-nav:hover {
+  background-image: url("../images/icon-close-green.svg");
 }
 
 footer .button {
