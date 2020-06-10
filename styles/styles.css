@@ -22,23 +22,6 @@ header {
   background-color: white;
 }
 
-.nav-button {
-  width: 24px;
-  height: 19px;
-  padding: 0;
-  -webkit-transition: background-image 0.2s;
-  transition: background-image 0.2s;
-  border: 0;
-  background-color: transparent;
-  background-image: url("../images/icon-hamburger.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.nav-button--open-nav {
-  background-image: url("../images/icon-close.svg");
-}
-
 nav {
   position: fixed;
   z-index: 2;
@@ -69,7 +52,6 @@ nav {
 .nav-list a {
   line-height: 45px;
   display: block;
-  text-decoration: none;
   letter-spacing: -1px;
   color: #2d314d;
 }
@@ -195,12 +177,7 @@ nav {
 }
 
 .article__title a {
-  text-decoration: none;
   color: #2d314d;
-}
-
-.article__title a:hover {
-  color: #31d35c;
 }
 
 .article__body {
@@ -223,19 +200,6 @@ footer {
   gap: 32px;
 }
 
-footer .button {
-  margin: 0;
-}
-
-footer a {
-  text-decoration: none;
-  color: white;
-}
-
-footer a:hover {
-  color: #31d35c;
-}
-
 .social-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,7 +217,6 @@ footer a:hover {
   position: relative;
   width: 24px;
   height: 24px;
-  text-decoration: none;
 }
 
 .social-links__link * {
@@ -320,10 +283,6 @@ p {
   margin-top: -30px;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
 .button {
   font-size: 14px;
   font-weight: bold;
@@ -331,10 +290,10 @@ button:hover {
   height: 44px;
   margin-top: 16px;
   margin-bottom: 16px;
-  -webkit-transition: -webkit-filter 0.3s;
-  transition: -webkit-filter 0.3s;
-  transition: filter 0.3s;
-  transition: filter 0.3s, -webkit-filter 0.3s;
+  -webkit-transition: -webkit-filter 0.2s ease-in-out;
+  transition: -webkit-filter 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out;
   color: white;
   border: 0;
   border-radius: 25px;
@@ -346,6 +305,57 @@ button:hover {
 .button:hover {
   -webkit-filter: brightness(125%) saturate(50%);
           filter: brightness(125%) saturate(50%);
+}
+
+a {
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #31d35c;
+}
+
+.nav-button {
+  width: 24px;
+  height: 19px;
+  padding: 0;
+  -webkit-transition: background-image 0.2s;
+  transition: background-image 0.2s;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.nav-button--open-nav {
+  background-image: url("../images/icon-close.svg");
+}
+
+footer .button {
+  margin: 0;
+}
+
+footer a {
+  color: white;
+}
+
+.social-links a {
+  -webkit-transition-property: -webkit-filter;
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
+}
+
+.social-links a:hover {
+  -webkit-filter: brightness(50%) sepia(100%) saturate(330%) hue-rotate(83.5deg);
+          filter: brightness(50%) sepia(100%) saturate(330%) hue-rotate(83.5deg);
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .bg-image {
