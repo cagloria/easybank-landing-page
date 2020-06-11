@@ -1,10 +1,12 @@
-$color-primary-blue: hsl(233, 26%, 24%);
 $color-primary-green: hsl(136, 65%, 51%);
 $color-primary-cyan: hsl(192, 70%, 51%);
-$color-neutral-gray-blue: hsl(233, 8%, 62%);
-$color-neutral-light-gray-blue: hsl(220, 16%, 96%);
-$color-neutral-light-gray: hsl(0, 0%, 98%);
-$color-neutral-white: hsl(0, 0%, 100%);
+$color-white: hsl(0, 0%, 100%);
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
 
 .button {
     font-size: 14px;
@@ -14,7 +16,7 @@ $color-neutral-white: hsl(0, 0%, 100%);
     margin-top: 16px;
     margin-bottom: 16px;
     transition: filter 0.2s ease-in-out;
-    color: $color-neutral-white;
+    color: $color-white;
     border: 0;
     border-radius: 25px;
     background-color: $color-primary-cyan;
@@ -26,6 +28,10 @@ $color-neutral-white: hsl(0, 0%, 100%);
     &:hover {
         filter: brightness(125%) saturate(50%);
     }
+}
+
+header .button {
+    display: none;
 }
 
 a {
@@ -62,7 +68,7 @@ footer {
         margin: 0;
     }
     a {
-        color: $color-neutral-white;
+        color: $color-white;
     }
 }
 
@@ -72,6 +78,13 @@ footer {
         &:hover {
             filter: brightness(50%) sepia(100%) saturate(330%)
                 hue-rotate(83.5deg);
+        }
+    }
+    &__link {
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     }
 }
