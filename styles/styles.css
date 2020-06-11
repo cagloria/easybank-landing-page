@@ -411,6 +411,8 @@ header {
   h2,
   h3 {
     max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -419,5 +421,13 @@ header {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     gap: 50px;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .articles-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }

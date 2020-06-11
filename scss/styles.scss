@@ -153,6 +153,8 @@ header {
     h2,
     h3 {
         max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -160,5 +162,12 @@ header {
     .features-container {
         grid-template-columns: 1fr 1fr;
         gap: 50px;
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    .articles-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
 }
