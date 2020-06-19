@@ -173,8 +173,10 @@ header {
         padding-top: 60px;
         padding-bottom: 40px;
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        gap: 30px;
         .logo {
+            align-self: center;
+
             grid-column: 1;
             grid-row: 1;
         }
@@ -184,24 +186,32 @@ header {
             grid-row: 2;
         }
 
-        .button {
+        .footer-nav {
             grid-column: 1;
             grid-row: 3;
         }
 
+        .button {
+            margin-right: 0;
+            margin-left: auto;
+
+            grid-column: 2;
+            grid-row: 1;
+        }
+
         .copyright {
-            grid-column: 1;
-            grid-row: 4;
+            margin: 0;
+            margin-left: auto;
+            text-align: right;
+            grid-column: 2;
+            grid-row: 2;
         }
 
         .attribution {
-            grid-column: 1;
-            grid-row: 5;
-        }
-
-        .footer-nav {
+            margin: 0;
+            text-align: right;
             grid-column: 2;
-            grid-row: 1 / 5;
+            grid-row: 3;
         }
     }
 }
