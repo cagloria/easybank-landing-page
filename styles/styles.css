@@ -416,6 +416,16 @@ header {
     margin-right: auto;
     margin-left: auto;
   }
+  .nav-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+  .nav-list a {
+    line-height: 70px;
+  }
 }
 
 @media only screen and (min-width: 580px) {
