@@ -30,14 +30,8 @@ header .button {
   display: none;
 }
 
-a {
-  -webkit-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #31d35c;
+footer .button {
+  margin: 0;
 }
 
 .nav-button {
@@ -65,30 +59,37 @@ a:hover {
   background-image: url("../images/icon-close-green.svg");
 }
 
-footer .button {
-  margin: 0;
+a {
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
 }
 
-footer a {
+a:hover {
+  color: #31d35c;
+}
+
+.link-blue {
+  color: #2d314d;
+}
+
+.link-white {
   color: white;
-}
-
-.social-links a {
-  -webkit-transition-property: -webkit-filter;
-  transition-property: -webkit-filter;
-  transition-property: filter;
-  transition-property: filter, -webkit-filter;
-}
-
-.social-links a:hover {
-  -webkit-filter: brightness(50%) sepia(100%) saturate(330%) hue-rotate(83.5deg);
-          filter: brightness(50%) sepia(100%) saturate(330%) hue-rotate(83.5deg);
 }
 
 .social-links__link a {
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-transition-property: -webkit-filter;
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
+}
+
+.social-links__link a:hover {
+  -webkit-filter: brightness(50%) sepia(100%) saturate(330%) hue-rotate(83.5deg);
+          filter: brightness(50%) sepia(100%) saturate(330%) hue-rotate(83.5deg);
 }
 
 nav {
@@ -122,7 +123,6 @@ nav {
   line-height: 45px;
   display: block;
   letter-spacing: -1px;
-  color: #2d314d;
 }
 
 .nav-cover {
@@ -388,10 +388,6 @@ header {
   line-height: 22px;
   margin: 0 32px 6px;
   text-align: left;
-}
-
-.article__title a {
-  color: #2d314d;
 }
 
 .article__body {
