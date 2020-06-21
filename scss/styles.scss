@@ -140,7 +140,17 @@ header {
     }
 }
 
+// Tablet
 @media only screen and (min-width: 426px) {
+    .bg-image {
+        top: 64px;
+        height: 482px;
+    }
+
+    .bg-devices {
+        top: -25px;
+    }
+
     .section-padding {
         padding-right: 50px;
         padding-left: 50px;
