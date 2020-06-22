@@ -498,13 +498,53 @@ header {
 
 @media only screen and (min-width: 769px) {
   .section-padding {
-    padding-right: 165px;
-    padding-left: 165px;
+    padding-right: 70px;
+    padding-left: 70px;
   }
   header {
     height: 80px;
   }
+  .nav-button {
+    display: none;
+  }
+  nav {
+    position: initial;
+    top: 0;
+    left: 0;
+    width: 400px;
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    background-color: transparent;
+  }
+  .nav-list {
+    font-size: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .nav-list a {
+    line-height: initial;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
   header .button {
     display: block;
+  }
+  .section-padding {
+    padding-right: 164px;
+    padding-left: 164px;
+  }
+  nav {
+    width: 330px;
   }
 }
