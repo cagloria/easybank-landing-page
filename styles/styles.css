@@ -94,7 +94,6 @@ a:hover {
 
 nav {
   position: fixed;
-  z-index: 2;
   top: 88px;
   left: 50%;
   width: 87%;
@@ -266,7 +265,7 @@ body {
 
 header {
   position: fixed;
-  z-index: 3;
+  z-index: 2;
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -494,5 +493,18 @@ header {
     grid-column: 2;
     -ms-grid-row: 3;
     grid-row: 3;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .section-padding {
+    padding-right: 165px;
+    padding-left: 165px;
+  }
+  header {
+    height: 80px;
+  }
+  header .button {
+    display: block;
   }
 }

@@ -41,7 +41,7 @@ body {
 
 header {
     position: fixed;
-    z-index: 3;
+    z-index: 2;
     top: 0;
     display: flex;
     align-items: center;
@@ -226,6 +226,22 @@ header {
             text-align: right;
             grid-column: 2;
             grid-row: 3;
+        }
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 769px) {
+    .section-padding {
+        padding-right: 165px;
+        padding-left: 165px;
+    }
+
+    header {
+        height: 80px;
+
+        .button {
+            display: block;
         }
     }
 }
