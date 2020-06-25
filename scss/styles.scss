@@ -270,6 +270,26 @@ header {
             line-height: initial;
         }
     }
+
+    .bg-image {
+        position: absolute;
+        top: -180px;
+        right: 0;
+        overflow: hidden;
+        width: 56.5vw;
+        height: 1034px;
+        background-image: url("../images/bg-intro-desktop.svg");
+        background-position: left;
+    }
+
+    .bg-devices {
+        position: absolute;
+        top: 137px;
+        right: -128px;
+        width: 53vw;
+        max-width: none;
+        height: auto;
+    }
 }
 
 // *********************************************************
@@ -286,5 +306,16 @@ header {
 
     nav {
         width: 330px;
+    }
+}
+
+// *********************************************************
+// Desktop - 4K
+@media only screen and (min-width: 1441px) {
+    .bg-devices {
+        right: -30%;
+        left: -10%;
+
+        width: 763px;
     }
 }
