@@ -409,12 +409,12 @@ header {
     padding-left: 50px;
   }
   .section-padding > p {
-    max-width: 400px;
+    max-width: 450px;
   }
   h1,
   h2,
   h3 {
-    max-width: 400px;
+    max-width: 600px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -552,6 +552,33 @@ header {
     max-width: none;
     height: auto;
   }
+  .intro-section {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 36vw;
+    max-width: 500px;
+    padding-top: 250px;
+    padding-bottom: 152px;
+  }
+  h1, h2, h3 {
+    text-align: left;
+  }
+  h1 {
+    font-size: 55px;
+  }
+  h1,
+  h2,
+  h3 {
+    margin-left: 0;
+    text-align: left;
+  }
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 9px;
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -568,6 +595,10 @@ header {
 }
 
 @media only screen and (min-width: 1441px) {
+  .section-padding {
+    padding-right: 15vw;
+    padding-left: 15vw;
+  }
   .bg-devices {
     right: -30%;
     left: -10%;
