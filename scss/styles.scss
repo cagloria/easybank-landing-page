@@ -389,6 +389,13 @@ header {
         width: 330px;
     }
 
+    footer {
+        padding-top: 48px;
+        grid-template-columns: 160px repeat(2, 1fr) 300px;
+        justify-items: start;
+        column-gap: 128px;
+    }
+
     .section-padding {
         padding-right: 164px;
         padding-left: 164px;
@@ -396,6 +403,49 @@ header {
 
     .features-container {
         margin-top: 50px;
+    }
+
+    footer {
+        .logo {
+            align-self: start;
+        }
+
+        .social-links {
+            width: 158px;
+        }
+
+        .footer-nav {
+            display: grid;
+            width: 360px;
+            text-align: left;
+            grid-column: 2 / 4;
+            grid-row: 1 / 3;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            grid-auto-flow: column;
+            row-gap: 5px;
+        }
+
+        .button {
+            grid-column: 4;
+            grid-row: 1;
+        }
+
+        .copyright {
+            grid-column: 4;
+            grid-row: 2;
+        }
+
+        .attribution {
+            margin-left: auto;
+            grid-column: 4;
+            grid-row: 3;
+        }
+
+        p,
+        a {
+            font-size: 13px;
+        }
     }
 }
 

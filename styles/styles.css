@@ -635,12 +635,69 @@ header {
   nav {
     width: 330px;
   }
+  footer {
+    padding-top: 48px;
+    -ms-grid-columns: 160px (1fr)[2] 300px;
+        grid-template-columns: 160px repeat(2, 1fr) 300px;
+    justify-items: start;
+    -webkit-column-gap: 128px;
+            column-gap: 128px;
+  }
   .section-padding {
     padding-right: 164px;
     padding-left: 164px;
   }
   .features-container {
     margin-top: 50px;
+  }
+  footer .logo {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  footer .social-links {
+    width: 158px;
+  }
+  footer .footer-nav {
+    display: -ms-grid;
+    display: grid;
+    width: 360px;
+    text-align: left;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    row-gap: 5px;
+  }
+  footer .button {
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  footer .copyright {
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  footer .attribution {
+    margin-left: auto;
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  footer p,
+  footer a {
+    font-size: 13px;
   }
 }
 
