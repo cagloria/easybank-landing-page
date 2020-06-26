@@ -12,27 +12,6 @@ $color-bg-light: hsl(0, 0%, 98%);
 $color-white: hsl(0, 0%, 100%);
 $font-family: "Public Sans", Arial, sans-serif;
 
-.bg-image {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 386px;
-    background-image: url("../images/bg-intro-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-}
-
-.bg-devices {
-    position: relative;
-    top: -56px;
-    display: block;
-    width: 91%;
-    max-width: 342px;
-    height: auto;
-    margin: 0 auto;
-}
-
 body {
     font-family: $font-family;
     margin: 0;
@@ -55,6 +34,27 @@ header {
 .section-padding {
     padding-right: 25px;
     padding-left: 25px;
+}
+
+.bg-image {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 386px;
+    background-image: url("../images/bg-intro-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.bg-devices {
+    position: relative;
+    top: -56px;
+    display: block;
+    width: 91%;
+    max-width: 342px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .intro-section {
@@ -140,13 +140,12 @@ header {
 // *********************************************************
 // Tablet - small
 @media only screen and (min-width: 426px) {
-    .bg-image {
-        top: 64px;
-        height: 482px;
-    }
-
-    .bg-devices {
-        top: -25px;
+    h1,
+    h2,
+    h3 {
+        max-width: 600px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .section-padding {
@@ -157,14 +156,6 @@ header {
         }
     }
 
-    h1,
-    h2,
-    h3 {
-        max-width: 600px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
     .nav-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -173,21 +164,20 @@ header {
             line-height: 70px;
         }
     }
+
+    .bg-image {
+        top: 64px;
+        height: 482px;
+    }
+
+    .bg-devices {
+        top: -25px;
+    }
 }
 
 // *********************************************************
 // Tablet - large
 @media only screen and (min-width: 580px) {
-    .features-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-    }
-
-    .articles-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
     footer {
         padding-top: 60px;
         padding-bottom: 40px;
@@ -231,22 +221,54 @@ header {
             grid-row: 3;
         }
     }
+
+    .features-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .articles-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
 }
 
 // *********************************************************
 // Desktop - small
 @media only screen and (min-width: 769px) {
-    .section-padding {
-        padding-right: 70px;
-        padding-left: 70px;
+    %heading {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    h3 {
+        font-size: 23px;
+        margin-top: 40px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 9px;
+        text-align: left;
     }
 
     header {
         height: 80px;
-    }
-
-    .nav-button {
-        display: none;
     }
 
     nav {
@@ -257,6 +279,18 @@ header {
         transition: none;
         transform: translate(0, 0);
         background-color: transparent;
+    }
+
+    .section-padding {
+        padding-right: 70px;
+        padding-left: 70px;
+        > p {
+            max-width: 640px;
+        }
+    }
+
+    .nav-button {
+        display: none;
     }
 
     .nav-list {
@@ -299,27 +333,18 @@ header {
         padding-bottom: 152px;
     }
 
-    %heading {
-        text-align: left;
+    .features-section {
+        align-items: flex-start;
+
+        padding-top: 75px;
     }
 
-    h1 {
-        font-size: 55px;
-    }
+    .feature {
+        align-items: flex-start;
 
-    h1,
-    h2,
-    h3 {
-        margin-left: 0;
-        text-align: left;
-    }
-
-    p {
-        font-size: 18px;
-        line-height: 28px;
-        margin-top: 9px;
-
-        text-align: left;
+        p {
+            margin-top: 0;
+        }
     }
 }
 
@@ -330,13 +355,24 @@ header {
         display: block;
     }
 
+    nav {
+        width: 330px;
+    }
+
     .section-padding {
         padding-right: 164px;
         padding-left: 164px;
     }
 
-    nav {
-        width: 330px;
+    .features-container {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .features-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
     }
 }
 
