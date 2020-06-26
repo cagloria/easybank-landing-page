@@ -36,6 +36,12 @@ header {
     padding-left: 25px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+}
+
 .bg-image {
     position: relative;
     top: 0;
@@ -74,10 +80,7 @@ header {
 }
 
 .features-container {
-    display: grid;
     margin-top: 55px;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
     gap: 11px;
 }
 
@@ -96,7 +99,6 @@ header {
     display: grid;
     margin-top: 31px;
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
     gap: 51px;
 }
 
@@ -116,23 +118,31 @@ header {
         }
     }
 
+    p {
+        margin-right: 32px;
+        margin-left: 32px;
+    }
+
     &__author {
         font-size: 10px;
-        margin: 22px 32px 3px;
+        margin-top: 22px;
+        margin-bottom: 3px;
         text-align: left;
         color: $color-text-main;
     }
 
     &__title {
         line-height: 22px;
-        margin: 0 32px 6px;
+        margin-top: 0;
+        margin-bottom: 6px;
         text-align: left;
     }
 
     &__body {
         font-size: 12px;
         line-height: 18px;
-        margin: 0 32px 15px;
+        margin-top: 0;
+        margin-bottom: 15px;
         text-align: left;
     }
 }
@@ -178,6 +188,10 @@ header {
 // *********************************************************
 // Tablet - large
 @media only screen and (min-width: 580px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
     footer {
         padding-top: 60px;
         padding-bottom: 40px;
@@ -223,12 +237,10 @@ header {
     }
 
     .features-container {
-        grid-template-columns: 1fr 1fr;
         gap: 50px;
     }
 
     .articles-container {
-        grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
 }
@@ -335,7 +347,6 @@ header {
 
     .features-section {
         align-items: flex-start;
-
         padding-top: 75px;
     }
 
@@ -344,6 +355,25 @@ header {
 
         p {
             margin-top: 0;
+        }
+    }
+
+    .articles-section {
+        padding-bottom: 88px;
+    }
+
+    .articles-container {
+        margin-top: 48px;
+    }
+
+    .article {
+        p {
+            margin-right: 25px;
+            margin-left: 25px;
+        }
+
+        &__author {
+            margin-bottom: 0;
         }
     }
 }
@@ -370,7 +400,7 @@ header {
 }
 
 @media only screen and (min-width: 1300px) {
-    .features-container {
+    .grid-container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 30px;
     }

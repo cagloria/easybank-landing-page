@@ -267,6 +267,14 @@ header {
   padding-left: 25px;
 }
 
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+}
+
 .bg-image {
   position: relative;
   top: 0;
@@ -319,12 +327,7 @@ header {
 }
 
 .features-container {
-  display: -ms-grid;
-  display: grid;
   margin-top: 55px;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-auto-rows: auto;
   gap: 11px;
 }
 
@@ -352,7 +355,6 @@ header {
   margin-top: 31px;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-auto-rows: auto;
   gap: 51px;
 }
 
@@ -376,23 +378,31 @@ header {
      object-fit: cover;
 }
 
+.article p {
+  margin-right: 32px;
+  margin-left: 32px;
+}
+
 .article__author {
   font-size: 10px;
-  margin: 22px 32px 3px;
+  margin-top: 22px;
+  margin-bottom: 3px;
   text-align: left;
   color: #9698a6;
 }
 
 .article__title {
   line-height: 22px;
-  margin: 0 32px 6px;
+  margin-top: 0;
+  margin-bottom: 6px;
   text-align: left;
 }
 
 .article__body {
   font-size: 12px;
   line-height: 18px;
-  margin: 0 32px 15px;
+  margin-top: 0;
+  margin-bottom: 15px;
   text-align: left;
 }
 
@@ -431,6 +441,10 @@ header {
 }
 
 @media only screen and (min-width: 580px) {
+  .grid-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
   footer {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -485,13 +499,9 @@ header {
     grid-row: 3;
   }
   .features-container {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
     gap: 50px;
   }
   .articles-container {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 }
@@ -603,6 +613,19 @@ header {
   .feature p {
     margin-top: 0;
   }
+  .articles-section {
+    padding-bottom: 88px;
+  }
+  .articles-container {
+    margin-top: 48px;
+  }
+  .article p {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  .article__author {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -622,7 +645,7 @@ header {
 }
 
 @media only screen and (min-width: 1300px) {
-  .features-container {
+  .grid-container {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
