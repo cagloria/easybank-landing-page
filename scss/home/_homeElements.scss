@@ -17,18 +17,16 @@ $font-family: "Public Sans", Arial, sans-serif;
 // Intro section
 .bg-image {
     position: relative;
-    top: 0;
+    top: -64px;
     width: 100%;
-    height: 386px;
     background-image: url("../images/bg-intro-mobile.svg");
     background-repeat: no-repeat;
-    background-position: center bottom;
     background-size: cover;
 }
 
 .bg-devices {
     position: relative;
-    top: -56px;
+    top: -54px;
     display: block;
     width: 91%;
     max-width: 342px;
@@ -107,12 +105,13 @@ $font-family: "Public Sans", Arial, sans-serif;
 // Tablet - small
 @media only screen and (min-width: 426px) {
     .bg-image {
-        top: 64px;
-        height: 482px;
+        height: 670px;
+        background-position: bottom;
     }
 
     .bg-devices {
-        top: -25px;
+        top: -45px;
+        max-width: 450px;
     }
 }
 
@@ -199,9 +198,13 @@ $font-family: "Public Sans", Arial, sans-serif;
 // *********************************************************
 // Desktop - 4K
 @media only screen and (min-width: 1441px) {
+    .bg-image {
+        background-size: contain;
+    }
+
     .bg-devices {
-        right: -30%;
-        left: -10%;
+        right: 50%;
+        left: 30%;
         width: 763px;
     }
 }
