@@ -1,0 +1,57 @@
+// Section and layout styles applied universally
+
+$color-primary-blue: hsl(233, 26%, 24%);
+$color-primary-green: hsl(136, 65%, 51%);
+$color-primary-cyan: hsl(192, 70%, 51%);
+$color-text-main: hsl(233, 8%, 62%);
+$color-bg-gray: hsl(220, 16%, 96%);
+$color-bg-light: hsl(0, 0%, 98%);
+$color-white: hsl(0, 0%, 100%);
+$font-family: "Public Sans", Arial, sans-serif;
+
+.section-padding {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+// *********************************************************
+// Tablet - small
+@media only screen and (min-width: 426px) {
+    .section-padding {
+        padding-right: 50px;
+        padding-left: 50px;
+        > p {
+            max-width: 450px;
+        }
+    }
+}
+
+// *********************************************************
+// Desktop - small
+@media only screen and (min-width: 769px) {
+    .section-padding {
+        padding-right: 70px;
+        padding-left: 70px;
+        > p {
+            max-width: 640px;
+        }
+    }
+}
+
+// *********************************************************
+// Desktop - large
+@media only screen and (min-width: 1025px) {
+    .section-padding {
+        padding-right: 164px;
+        padding-left: 164px;
+    }
+}
+
+// *********************************************************
+// Desktop - 4K
+@media only screen and (min-width: 1441px) {
+    .section-padding {
+        padding-right: 15vw;
+        padding-left: 15vw;
+    }
+}
