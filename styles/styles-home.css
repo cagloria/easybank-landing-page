@@ -1,13 +1,9 @@
 .section-padding {
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-right: 7vw;
+  padding-left: 7vw;
 }
 
 @media only screen and (min-width: 426px) {
-  .section-padding {
-    padding-right: 50px;
-    padding-left: 50px;
-  }
   .section-padding > p {
     max-width: 450px;
   }
@@ -15,25 +11,11 @@
 
 @media only screen and (min-width: 769px) {
   .section-padding {
-    padding-right: 70px;
-    padding-left: 70px;
+    padding-right: 11.4vw;
+    padding-left: 11.4vw;
   }
   .section-padding > p {
     max-width: 640px;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .section-padding {
-    padding-right: 164px;
-    padding-left: 164px;
-  }
-}
-
-@media only screen and (min-width: 1441px) {
-  .section-padding {
-    padding-right: 15vw;
-    padding-left: 15vw;
   }
 }
 
@@ -732,6 +714,11 @@ footer {
     max-width: none;
     height: auto;
   }
+  .grid-container {
+    -ms-grid-columns: (minmax(auto, 325px))[2];
+        grid-template-columns: repeat(2, minmax(auto, 325px));
+    gap: 30px;
+  }
   .feature {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -758,11 +745,10 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1250px) {
   .grid-container {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+    -ms-grid-columns: (minmax(auto, 325px))[4];
+        grid-template-columns: repeat(4, minmax(auto, 325px));
   }
 }
 

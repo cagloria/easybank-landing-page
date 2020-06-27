@@ -154,6 +154,11 @@ $font-family: "Public Sans", Arial, sans-serif;
         height: auto;
     }
 
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(auto, 325px));
+        gap: 30px;
+    }
+
     .feature {
         align-items: flex-start;
 
@@ -186,12 +191,9 @@ $font-family: "Public Sans", Arial, sans-serif;
     }
 }
 
-// *********************************************************
-// Desktop - large
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1250px) {
     .grid-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 30px;
+        grid-template-columns: repeat(4, minmax(auto, 325px));
     }
 }
 
