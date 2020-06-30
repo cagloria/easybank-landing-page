@@ -59,4 +59,9 @@ window.onscroll = function () {
  */
 window.onload = function () {
     setNavTabIndex();
+
+    // Set up skip link
+    $("#skip-link").click(function () {
+        $("#main-content").focus();
+    });
 };

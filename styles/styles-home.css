@@ -67,6 +67,32 @@ a:hover {
   color: #31d35c;
 }
 
+.skip-link {
+  line-height: 35px;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  background-color: #2d314d;
+}
+
+.skip-link:focus {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .link-blue {
   color: #2d314d;
 }

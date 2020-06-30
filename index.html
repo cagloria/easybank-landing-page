@@ -27,10 +27,18 @@
     </head>
 
     <body>
+        <a class="skip-link link-white" id="skip-link" href="#main-content"
+            >Skip to main content</a
+        >
+
         <header class="section-padding">
             <img src="./images/logo.svg" alt="Easybank logo" class="logo" />
 
-            <button class="nav-button" onclick="toggleNav()"></button>
+            <button
+                class="nav-button"
+                aria-label="Toggle navigation menu"
+                onclick="toggleNav()"
+            ></button>
 
             <nav>
                 <ul class="nav-list">
@@ -57,7 +65,7 @@
 
         <div class="nav-cover" onclick="toggleNav()"></div>
 
-        <main>
+        <main id="main-content" tabindex="-1">
             <div class="bg-image">
                 <img
                     src="./images/image-mockups.png"
@@ -249,37 +257,27 @@
             <ul class="social-links">
                 <li class="social-links__link">
                     <a href="#"
-                        ><img
-                            src="./images/icon-facebook.svg"
-                            alt="Facebook icon link"
+                        ><img src="./images/icon-facebook.svg" alt="Facebook"
                     /></a>
                 </li>
                 <li class="social-links__link">
                     <a href="#"
-                        ><img
-                            src="./images/icon-youtube.svg"
-                            alt="YouTube icon link"
+                        ><img src="./images/icon-youtube.svg" alt="YouTube"
                     /></a>
                 </li>
                 <li class="social-links__link">
                     <a href="#"
-                        ><img
-                            src="./images/icon-twitter.svg"
-                            alt="Twitter icon link"
+                        ><img src="./images/icon-twitter.svg" alt="Twitter"
                     /></a>
                 </li>
                 <li class="social-links__link">
                     <a href="#"
-                        ><img
-                            src="./images/icon-pinterest.svg"
-                            alt="Pinterest icon link"
+                        ><img src="./images/icon-pinterest.svg" alt="Pinterest"
                     /></a>
                 </li>
                 <li class="social-links__link">
                     <a href="#"
-                        ><img
-                            src="./images/icon-instagram.svg"
-                            alt="Instagram icon link"
+                        ><img src="./images/icon-instagram.svg" alt="Instagram"
                     /></a>
                 </li>
             </ul>

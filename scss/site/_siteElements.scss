@@ -65,6 +65,24 @@ a {
     }
 }
 
+.skip-link {
+    line-height: 35px;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    transition-delay: 0.5s;
+    transition-property: transform;
+    transform: translateY(-40px);
+    background-color: $color-primary-blue;
+    &:focus {
+        transition-delay: 0s;
+        transform: translateY(0);
+    }
+}
+
 .link-blue {
     color: $color-primary-blue;
 }
