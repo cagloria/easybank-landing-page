@@ -41,21 +41,29 @@
             ></button>
 
             <nav>
-                <ul class="nav-list">
-                    <li class="nav-list__item">
-                        <a href="#" class="link-blue">Home</a>
+                <ul
+                    class="nav-list"
+                    role="menubar"
+                    aria-label="Easybank navigation"
+                >
+                    <li class="nav-list__item" role="none">
+                        <a href="#" class="link-blue" role="menuitem">Home</a>
                     </li>
-                    <li class="nav-list__item">
-                        <a href="#" class="link-blue">About</a>
+                    <li class="nav-list__item" role="none">
+                        <a href="#" class="link-blue" role="menuitem">About</a>
                     </li>
-                    <li class="nav-list__item">
-                        <a href="#" class="link-blue">Contact</a>
+                    <li class="nav-list__item" role="none">
+                        <a href="#" class="link-blue" role="menuitem"
+                            >Contact</a
+                        >
                     </li>
-                    <li class="nav-list__item">
-                        <a href="#" class="link-blue">Blog</a>
+                    <li class="nav-list__item" role="none">
+                        <a href="#" class="link-blue" role="menuitem">Blog</a>
                     </li>
-                    <li class="nav-list__item">
-                        <a href="#" class="link-blue">Careers</a>
+                    <li class="nav-list__item" role="none">
+                        <a href="#" class="link-blue" role="menuitem"
+                            >Careers</a
+                        >
                     </li>
                 </ul>
             </nav>
@@ -63,7 +71,7 @@
             <button class="button">Request Invite</button>
         </header>
 
-        <div class="nav-cover" onclick="toggleNav()"></div>
+        <div class="nav-cover" onclick="toggleNav()" aria-hidden="true"></div>
 
         <main id="main-content" tabindex="-1">
             <div class="bg-image">
