@@ -6,6 +6,8 @@
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
 
+This project has been deployed to [cagloria.github.io/easybank-landing-page/](https://cagloria.github.io/easybank-landing-page/).
+
 ## The challenge
 
 Your challenge is to build out this landing page and get it looking as close to the design as possible.
