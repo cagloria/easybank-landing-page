@@ -2,19 +2,19 @@
 
 ![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
+<p align="center">
+    <img alt="Repo size badge" src="https://img.shields.io/github/repo-size/cagloria/easybank-landing-page" />
+</p>
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
+This is a solution to the [Easybank landing page challenge provided by Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN).
 
-This project has been deployed to [cagloria.github.io/easybank-landing-page/](https://cagloria.github.io/easybank-landing-page/).
+## The Challenge
 
-## The challenge
+Users should be able to:
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
+-   View the optimal layout for the site depending on their device's screen size
+-   See hover states for all interactive elements on the page
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Demo
 
-Your users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+This project has been deployed to GitHub Pages at [cagloria.github.io/easybank-landing-page/](https://cagloria.github.io/easybank-landing-page/).
